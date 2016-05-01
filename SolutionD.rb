@@ -54,10 +54,13 @@ class Game
 
             reply = STDIN.gets
             reply.chop!
+
+
+
             reply = reply.to_i
 
             @judge +=1
-            if @judge >2
+            if @judge >10
               Console_Screen.cls
               puts "You lost the game!"
               Console_Screen.pause
