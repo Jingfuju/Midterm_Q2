@@ -37,12 +37,12 @@ class Game
         Console_Screen.cls
         puts "Instruction:\n\n"
 
-        puts "This game randomly generates a number from 1 to 1000 and "
+        puts "This game randomly generates a number from 1 to 100 and "
         puts "challaenges you to identify it in as few guesses and possible "
     end
 
     def generate_number
-        return randomNo = 1 + rand(1000)
+        return randomNo = 1 + rand(100)
     end
 
     def play_game
@@ -56,7 +56,7 @@ class Game
             reply.chop!
             reply = reply.to_i
 
-            if reply < 1 or reply > 1000 then
+            if reply < 1 or reply > 100 then
                 redo # redo the ciurrent iteration of the loop
             end
 
